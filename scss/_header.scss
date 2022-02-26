@@ -1,0 +1,11 @@
+header{
+    background-image: url(/Imagenes/imagen2.jpg);
+    object-fit: contain;
+    object-position: center;
+    min-height: 40vh;
+    max-height: auto;
+    .marca{
+        display: flex;
+        justify-content: center;
+    }
+}

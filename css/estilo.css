@@ -1,4 +1,47 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: pink; }
+
+header {
+  background-image: url(/Imagenes/imagen2.jpg);
+  object-fit: contain;
+  object-position: center;
+  min-height: 40vh;
+  max-height: auto; }
+  header .marca {
+    display: flex;
+    justify-content: center; }
+
+main img {
+  height: 300px;
+  width: 300px; }
+
+.agendas {
+  background-image: url(/Imagenes/agendas.jpg);
+  height: 300px;
+  object-fit: cover; }
+
+.mates {
+  background-image: url(/Imagenes/mates.jpg);
+  height: 300px;
+  object-fit: contain; }
+
+.combos {
+  background-image: url(/Imagenes/combos.jpg);
+  height: 300px;
+  object-fit: contain; }
+
+.regalos {
+  background-image: url(/Imagenes/regalos.jpg);
+  height: 300px;
+  object-fit: contain; }
+
+.footer {
+  background-color: #f84664;
+  height: 50vh; }
+  .footer img {
+    height: 100px;
+    width: 100px; }
