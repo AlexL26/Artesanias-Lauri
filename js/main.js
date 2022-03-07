@@ -14,11 +14,11 @@ class Agenda {
     }
 }
 
-const agenda1 = new Agenda("color rosa", 200);
-const agenda2 = new Agenda("color azul", 150);
-const agenda3 = new Agenda("semanal", 300);
-const agenda4 = new Agenda("calendario", 175);
-const agenda5 = new Agenda("diaria", 400);
+const agenda1 = new Agenda("agenda color rosa", 200);
+const agenda2 = new Agenda("agenda color azul", 150);
+const agenda3 = new Agenda("agenda semanal", 300);
+const agenda4 = new Agenda("agenda calendario", 175);
+const agenda5 = new Agenda("agenda diaria", 400);
 
 const agendaArray = [{ id: 1, name: agenda1 }, { id: 2, name: agenda2 }, { id: 3, name: agenda3 }, { id: 4, name: agenda4 }, { id: 5, name: agenda5 }]
 
@@ -55,9 +55,9 @@ class Mate {
     }
 }
 
-const mate1 = new Mate("color liso", 200);
-const mate2 = new Mate("con diseño", 300);
-const mate3 = new Mate("grande", 450);
+const mate1 = new Mate("mate color liso", 200);
+const mate2 = new Mate("mate con diseño", 300);
+const mate3 = new Mate("mate grande", 450);
 
 const mateArray = [{ id: 1, name: mate1 }, { id: 2, name: mate2 }, { id: 3, name: mate3 }]
 
@@ -85,6 +85,7 @@ class Carrito {
         this.precioTotal = 0
     }
     setTotal() {
+        this.precioTotal = 0
         if (this.productosComprados.length > 0) {
             this.productosComprados.forEach(x => {
                 this.precioTotal += x.precio
@@ -117,7 +118,7 @@ if (comprar != "si") {
             let comprarAgenda = parseInt(prompt("Tenemos estas agendas para ofrecerte:\n" + MostrarAgendas() + "\nCual desea comprar?:"))
 
             function venderAgenda(x) {
-                let enviarAgenda = prompt("Desea que le enviemos el producto a su hogar?: (si/no)")
+                let enviarAgenda = prompt("Desea que le enviemos el producto a su hogar?: (si/no)\n\nSi ya encargo algun producto con envio previamente ingrese 'no' asi no se le suma nuevamente el precio por el envio")
 
                 while ((enviarAgenda != "si") && (enviarAgenda != "no")) {
                     alert("Por favor ingrese una de las opciones señaladas para continuar")
@@ -160,7 +161,7 @@ if (comprar != "si") {
             let comprarMate = parseInt(prompt("Tenemos estos mates para ofrecerte:\n" + MostrarMates() + "\nCual desea comprar?:"))
 
             function venderMate(x) {
-                let enviarMate = prompt("Desea que le enviemos el producto a su hogar?: (si/no)")
+                let enviarMate = prompt("Desea que le enviemos el producto a su hogar?: (si/no)\n\nSi ya encargo algun producto con envio previamente ingrese 'no' asi no se le suma nuevamente el precio por el envio")
 
                 while ((enviarMate != "si") && (enviarMate != "no")) {
                     alert("Por favor ingrese una de las opciones señaladas para continuar")
