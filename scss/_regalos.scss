@@ -1,6 +1,49 @@
-.regalos{
-    background-image: url(/Imagenes/regalos.jpg);
+.productosRegalos{
+    display: flex;
+    position: relative;
     height: 100vh;
-    object-fit: cover;
-    background-repeat: no-repeat;
-}
+    z-index: 1;
+    .regalos{
+        z-index: 10;
+        position: absolute;
+        background-image: url(/Imagenes/regalos.jpg);
+        height: inherit;
+        width: 100vw;
+        background-size: cover;
+        background-position-y: center;
+        object-fit: cover;
+        background-repeat: no-repeat;
+    }
+    .botonRegalos{
+        z-index: 11;
+        position: absolute;
+    }
+    .slide-out-left {
+        -webkit-animation: slide-out-left 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+                animation: slide-out-left 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+    @-webkit-keyframes slide-out-left {
+        0% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: translateX(-1000px);
+                  transform: translateX(-1000px);
+          opacity: 0;
+        }
+      }
+      @keyframes slide-out-left {
+        0% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: translateX(-1000px);
+                  transform: translateX(-1000px);
+          opacity: 0;
+        }
+      }
+    }

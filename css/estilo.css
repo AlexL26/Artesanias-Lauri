@@ -33,29 +33,177 @@ main img {
   height: 300px;
   width: 300px; }
 
-.agendas {
-  background-image: url(/Imagenes/agendas.jpg);
+.productosAgendas {
+  display: flex;
+  position: relative;
   height: 100vh;
-  object-fit: cover;
-  background-repeat: no-repeat; }
+  z-index: 1; }
+  .productosAgendas .agendas {
+    z-index: 10;
+    position: absolute;
+    background-image: url(/Imagenes/agendas.jpg);
+    height: inherit;
+    width: 100vw;
+    background-size: cover;
+    background-position-y: center;
+    object-fit: cover;
+    background-repeat: no-repeat; }
+  .productosAgendas .botonAgendas {
+    z-index: 11;
+    position: absolute; }
+  .productosAgendas .none {
+    display: none; }
+  .productosAgendas .slide-out-right {
+    -webkit-animation: slide-out-right 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    animation: slide-out-right 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
 
-.mates {
-  background-image: url(/Imagenes/mates.jpg);
-  height: 100vh;
-  object-fit: cover;
-  background-repeat: no-repeat; }
+@-webkit-keyframes slide-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0; } }
 
-.combos {
-  background-image: url(/Imagenes/combos.jpg);
-  height: 100vh;
-  object-fit: contain;
-  background-repeat: no-repeat; }
+@keyframes slide-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0; } }
 
-.regalos {
-  background-image: url(/Imagenes/regalos.jpg);
+.productosMates {
+  display: flex;
+  position: relative;
   height: 100vh;
-  object-fit: cover;
-  background-repeat: no-repeat; }
+  z-index: 1; }
+  .productosMates .mates {
+    z-index: 10;
+    position: absolute;
+    background-image: url(/Imagenes/mates.jpg);
+    height: inherit;
+    width: 100vw;
+    background-size: cover;
+    background-position-y: center;
+    object-fit: cover;
+    background-repeat: no-repeat; }
+  .productosMates .botonMates {
+    z-index: 11;
+    position: absolute; }
+  .productosMates .slide-out-left {
+    -webkit-animation: slide-out-left 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    animation: slide-out-left 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
+
+@-webkit-keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0; } }
+
+@keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0; } }
+
+.productosCombos {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  z-index: 1; }
+  .productosCombos .combos {
+    z-index: 10;
+    position: absolute;
+    background-image: url(/Imagenes/combos.jpg);
+    height: inherit;
+    width: 100vw;
+    background-size: cover;
+    background-position-y: center;
+    object-fit: cover;
+    background-repeat: no-repeat; }
+  .productosCombos .botonCombos {
+    z-index: 11;
+    position: absolute; }
+  .productosCombos .none {
+    display: none; }
+  .productosCombos .slide-out-right {
+    -webkit-animation: slide-out-right 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    animation: slide-out-right 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
+
+@-webkit-keyframes slide-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0; } }
+
+@keyframes slide-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0; } }
+
+.productosRegalos {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  z-index: 1; }
+  .productosRegalos .regalos {
+    z-index: 10;
+    position: absolute;
+    background-image: url(/Imagenes/regalos.jpg);
+    height: inherit;
+    width: 100vw;
+    background-size: cover;
+    background-position-y: center;
+    object-fit: cover;
+    background-repeat: no-repeat; }
+  .productosRegalos .botonRegalos {
+    z-index: 11;
+    position: absolute; }
+  .productosRegalos .slide-out-left {
+    -webkit-animation: slide-out-left 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    animation: slide-out-left 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
+
+@-webkit-keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0; } }
+
+@keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0; } }
 
 .footer {
   background-color: #f84664;
