@@ -1,6 +1,53 @@
-.agendas{
-    background-image: url(/Imagenes/agendas.jpg);
+.productosAgendas{
+    display: flex;
+    position: relative;
     height: 100vh;
-    object-fit: cover;
-    background-repeat: no-repeat;
+    z-index: 1;
+    .agendas{
+        z-index: 10;
+        position: absolute;
+        background-image: url(/Imagenes/agendas.jpg);
+        height: inherit;
+        width: 100vw;
+        background-size: cover;
+        background-position-y: center;
+        object-fit: cover;
+        background-repeat: no-repeat;
+    }
+    .botonAgendas{
+        z-index: 11;
+        position: absolute;
+    }
+    .none{
+        display: none;
+    }
+    
+    .slide-out-right {
+        -webkit-animation: slide-out-right 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+                animation: slide-out-right 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+    @-webkit-keyframes slide-out-right {
+        0% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: translateX(1000px);
+                  transform: translateX(1000px);
+          opacity: 0;
+        }
+      }
+      @keyframes slide-out-right {
+        0% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: translateX(1000px);
+                  transform: translateX(1000px);
+          opacity: 0;
+        }
+      }    
 }
