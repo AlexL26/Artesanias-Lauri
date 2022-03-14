@@ -41,7 +41,7 @@ main img {
   .productosAgendas .agendas {
     z-index: 10;
     position: absolute;
-    background-image: url(/Imagenes/agendas.jpg);
+    background-image: url(../Imagenes/agendas.jpg);
     height: inherit;
     width: 100vw;
     background-size: cover;
@@ -85,7 +85,7 @@ main img {
   .productosMates .mates {
     z-index: 10;
     position: absolute;
-    background-image: url(/Imagenes/mates.jpg);
+    background-image: url(../Imagenes/mates.jpg);
     height: inherit;
     width: 100vw;
     background-size: cover;
@@ -127,7 +127,7 @@ main img {
   .productosCombos .combos {
     z-index: 10;
     position: absolute;
-    background-image: url(/Imagenes/combos.jpg);
+    background-image: url(../Imagenes/combos.jpg);
     height: inherit;
     width: 100vw;
     background-size: cover;
@@ -171,7 +171,7 @@ main img {
   .productosRegalos .regalos {
     z-index: 10;
     position: absolute;
-    background-image: url(/Imagenes/regalos.jpg);
+    background-image: url(../Imagenes/regalos.jpg);
     height: inherit;
     width: 100vw;
     background-size: cover;
