@@ -7,7 +7,7 @@ body {
 
 header {
   background-color: #fff4f1;
-  background-image: url(/Imagenes/Fondo.jpg);
+  background-image: url(../Imagenes/Fondo.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: center;
