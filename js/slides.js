@@ -13,20 +13,20 @@ botonAgendas.addEventListener("click", (e)=>{
     e.target.classList.add('slide-out-right')
 })
 
-botonMates.addEventListener("click", (e)=>{
-    mates.classList.add("slide-out-left")
-    e.target.classList.add("slide-out-left")
-})
+// botonMates.addEventListener("click", (e)=>{
+//     mates.classList.add("slide-out-left")
+//     e.target.classList.add("slide-out-left")
+// })
 
-botonCombos.addEventListener("click", (e)=>{
-    combos.classList.add("slide-out-right")
-    e.target.classList.add('slide-out-right')
-})
+// botonCombos.addEventListener("click", (e)=>{
+//     combos.classList.add("slide-out-right")
+//     e.target.classList.add('slide-out-right')
+// })
 
-botonRegalos.addEventListener("click", (e)=>{
-    regalos.classList.add("slide-out-left")
-    e.target.classList.add("slide-out-left")
-})
+// botonRegalos.addEventListener("click", (e)=>{
+//     regalos.classList.add("slide-out-left")
+//     e.target.classList.add("slide-out-left")
+// })
 
 footer.innerHTML = `<img src="Imagenes/facebook.png" alt="">
 <img src="Imagenes/instagram-logo-png_6023f9ae0feb9-680x680.png" alt="">
