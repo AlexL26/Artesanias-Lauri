@@ -1,6 +1,6 @@
-const data = `[{"id": 1, "nombre": "Agenda 1", "precio": 300, "img":"../Imagenes/Agendas/agenda1.jpg"},
-                {"id": 2, "nombre": "Agenda 2", "precio": 200, "img":"../Imagenes/Agendas/agenda2.jpg"},
-                {"id": 3, "nombre": "Agenda 3", "precio": 400, "img":"../Imagenes/Agendas/agenda3.jpg"}
+const data = `[{"id": 1, "nombre": "Agenda 1", "precio": 300, "img":"Imagenes/Agendas/agenda1.jpg"},
+                {"id": 2, "nombre": "Agenda 2", "precio": 200, "img":"Imagenes/Agendas/agenda2.jpg"},
+                {"id": 3, "nombre": "Agenda 3", "precio": 400, "img":"Imagenes/Agendas/agenda3.jpg"}
 ]`
 const agenda = JSON.parse(data)
 
