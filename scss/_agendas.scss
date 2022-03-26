@@ -1,21 +1,59 @@
 .productosAgendas{
     display: flex;
     position: relative;
+    width: 100vw;
+    overflow-x: scroll;
     height: 100vh;
     z-index: 1;
+    .card{
+      margin: 0 50px;
+      justify-content: space-evenly;
+      img{
+        height: 250px;
+      }
+    }
     .agendas{
-        z-index: 10;
+        z-index: 2;
         position: absolute;
-        background-image: url(../Imagenes/agendas.jpg);
+        // background-image: url(../Imagenes/agendas.jpg);
+        background-color: rgb(112, 216, 207);
         height: inherit;
         width: 100vw;
-        background-size: cover;
-        background-position-y: center;
-        object-fit: cover;
-        background-repeat: no-repeat;
+        // background-size: cover;
+        // background-position-y: center;
+        // object-fit: cover;
+        // background-repeat: no-repeat;
+        .imagen{
+          height: inherit;
+          &Texto{
+            z-index: 3;
+            height: inherit;
+            width: 50vw;
+            position: absolute;
+          }
+          &Agenda{
+            overflow-y: hidden;
+            z-index: 2;
+            height: inherit;
+            width: 80%;
+            position: absolute;
+            right: 0%;
+          }
+        }
+    }
+    .introAgendas{
+      z-index: 11;
+      position: absolute;
+      bottom: 40%;
+      left: 50px;
+      width: 30vw;
+      background-color: rgba(127, 255, 212, 0.432);
+      
     }
     .botonAgendas{
         z-index: 11;
+        bottom: 35%;
+        left: 75px;
         position: absolute;
     }
     .none{

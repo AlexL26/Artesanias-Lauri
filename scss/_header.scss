@@ -4,7 +4,7 @@ header{
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: top;
+    background-position-y: center;
     height: 100vh;
     .marca{
         display: flex;
@@ -18,7 +18,7 @@ header{
             font-size: 20px;
             font-weight: 700;
             li{
-                margin: 0px 10px;
+                margin: 0px 20px;
                 a:hover{
                     background-color: rgb(250, 141, 159);
                     border-radius: 10px;
