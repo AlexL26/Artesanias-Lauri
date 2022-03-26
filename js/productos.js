@@ -1,6 +1,6 @@
-const data = `[{"id": 1, "nombre": "Agenda 1", "precio": 300, "img":"Imagenes/Agendas/agenda1.jpg"},
-                {"id": 2, "nombre": "Agenda 2", "precio": 200, "img":"Imagenes/Agendas/agenda2.jpg"},
-                {"id": 3, "nombre": "Agenda 3", "precio": 400, "img":"Imagenes/Agendas/agenda3.jpg"}
+const data = `[{"id": 1, "nombre": "Agenda 1", "precio": 300, "img":"../Imagenes/Agendas/agenda1.jpg"},
+                {"id": 2, "nombre": "Agenda 2", "precio": 200, "img":"../Imagenes/Agendas/agenda2.jpg"},
+                {"id": 3, "nombre": "Agenda 3", "precio": 400, "img":"../Imagenes/Agendas/agenda3.jpg"}
 ]`
 const agenda = JSON.parse(data)
 
@@ -16,7 +16,7 @@ if (ls_db.length > 0){
 const carousel_agenda = document.getElementById("carousel-agenda")
 for(const i of agenda){
     let div = document.createElement("div")
-    div.innerHTML = `<div class="card" style="width: 18rem;" id="agenda1">
+    div.innerHTML = `<div class="card" style="width: 18rem;" id="agenda${i.id}">
     <img src="${i.img}" class="card-img-top" alt="agenda1">
     <div class="card-body">
       <h5 class="card-title">${i.nombre}</h5>
