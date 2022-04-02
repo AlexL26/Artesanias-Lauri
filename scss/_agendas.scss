@@ -15,14 +15,9 @@
     .agendas{
         z-index: 2;
         position: absolute;
-        // background-image: url(../Imagenes/agendas.jpg);
         background-color: rgb(112, 216, 207);
         height: inherit;
         width: 100vw;
-        // background-size: cover;
-        // background-position-y: center;
-        // object-fit: cover;
-        // background-repeat: no-repeat;
         .imagen{
           height: inherit;
           &Texto{
@@ -56,10 +51,7 @@
         left: 75px;
         position: absolute;
     }
-    .none{
-        display: none;
-    }
-    
+        
     .slide-out-right {
         -webkit-animation: slide-out-right 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
                 animation: slide-out-right 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;

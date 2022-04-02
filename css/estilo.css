@@ -5,6 +5,9 @@
 body {
   background-color: pink; }
 
+.none {
+  display: none; }
+
 header {
   background-color: #fff4f1;
   background-image: url(../Imagenes/Fondo.jpg);
@@ -32,6 +35,15 @@ header {
 main img {
   height: 300px;
   width: 300px; }
+
+.botonCompra {
+  position: absolute;
+  bottom: 5%;
+  left: 45%;
+  height: 75px;
+  width: fit-content;
+  font-size: 2rem;
+  font-weight: 700; }
 
 .productosAgendas {
   display: flex;
@@ -77,8 +89,6 @@ main img {
     bottom: 35%;
     left: 75px;
     position: absolute; }
-  .productosAgendas .none {
-    display: none; }
   .productosAgendas .slide-out-right {
     -webkit-animation: slide-out-right 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
     animation: slide-out-right 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
@@ -108,18 +118,40 @@ main img {
   position: relative;
   height: 100vh;
   z-index: 1; }
+  .productosMates .card {
+    margin: 0 50px;
+    justify-content: space-evenly; }
+    .productosMates .card img {
+      height: 250px; }
   .productosMates .mates {
-    z-index: 10;
+    z-index: 2;
     position: absolute;
-    background-image: url(../Imagenes/mates.jpg);
+    background-color: #70d8cf;
     height: inherit;
-    width: 100vw;
-    background-size: cover;
-    background-position-y: center;
-    object-fit: cover;
-    background-repeat: no-repeat; }
+    width: 100vw; }
+    .productosMates .mates .imagenTexto {
+      z-index: 3;
+      height: inherit;
+      width: 50vw;
+      position: absolute; }
+    .productosMates .mates .imagenMates {
+      overflow-y: hidden;
+      z-index: 2;
+      height: inherit;
+      width: 80%;
+      position: absolute;
+      right: 0%; }
+  .productosMates .introMates {
+    z-index: 11;
+    position: absolute;
+    bottom: 40%;
+    left: 50px;
+    width: 30vw;
+    background-color: rgba(127, 255, 212, 0.432); }
   .productosMates .botonMates {
     z-index: 11;
+    bottom: 35%;
+    left: 75px;
     position: absolute; }
   .productosMates .slide-out-left {
     -webkit-animation: slide-out-left 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
