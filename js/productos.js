@@ -1,25 +1,62 @@
-const dataAgendas = `[{"id": 1, "nombre": "Agenda 1", "precio": 300, "img":"../Imagenes/Agendas/agenda1.jpg"},
-                      {"id": 2, "nombre": "Agenda 2", "precio": 200, "img":"../Imagenes/Agendas/agenda2.jpg"},
-                      {"id": 3, "nombre": "Agenda 3", "precio": 400, "img":"../Imagenes/Agendas/agenda3.jpg"}
-]`
-
-const dataMates = `[{"id": 1, "nombre": "Mate 1", "precio": 300, "img":"../Imagenes/Mates/mate1.jpeg"},
-                    {"id": 2, "nombre": "Mate 2", "precio": 200, "img":"../Imagenes/Mates/mate2.jpg"},
-                    {"id": 3, "nombre": "Mate 3", "precio": 400, "img":"../Imagenes/Mates/mate3.jpg"}
-]`
-
-const agenda = JSON.parse(dataAgendas)
-const mate = JSON.parse(dataMates)
+fetch("./js/productos.json")
+.then(datos => datos.json())
+.then(x=> cargarElementos(x))
 
 const carousel_agenda = document.getElementById("carousel-agenda")
 const carousel_mates = document.getElementById("carousel-mates")
 const verCarrito = document.getElementById("carrito")
+const btnFinalizarCompra = document.getElementById("finalizarCompra")
+const btnCancelarCompra = document.getElementById("cancelarCompra")
+
+let precioTotal = 0
 
 let carrito = []
 let lsCarrito = localStorage.getItem("carrito") || []
-console.log(lsCarrito)
 
 lsCarrito.length > 0 ? carrito = JSON.parse(lsCarrito) : false
+
+function cargarElementos(x){
+  for(const i of x[0]){
+    let {id, nombre, precio, img} = i
+      let div = document.createElement("div")
+      div.innerHTML = `<div class="card" style="width: 18rem;" id="agenda${id}">
+      <img src="${img}" class="card-img-top" alt="agenda${id}">
+      <div class="card-body">
+        <h5 class="card-title">${nombre}</h5>
+        <p class="card-text">Te gusta esta agenda? COMPRALA MACHO. Te sale $${precio}</p>
+        <button class="btn btn-primary" type="button" id="btnCarritoAgenda${id}">Agregar al Carrito</button>
+      </div>
+    </div>`
+    carousel_agenda.append(div)
+    document.getElementById(`btnCarritoAgenda${id}`).addEventListener("click", ()=>{
+      carrito.push(i)
+      console.log(carrito);
+      localStorage.setItem("carrito", JSON.stringify(carrito))
+      agregarLinea(i)
+    })
+  }
+  
+  for(const i of x[1]){
+    let {id, nombre, precio, img} = i
+      let div = document.createElement("div")
+      div.innerHTML = `<div class="card" style="width: 18rem;" id="mates${id}">
+      <img src="${img}" class="card-img-top" alt="mate${id}">
+      <div class="card-body">
+        <h5 class="card-title">${nombre}</h5>
+        <p class="card-text">Te gusta este Mate? COMPRALA MACHO. Te sale $${precio}</p>
+        <button class="btn btn-primary" type="button" id="btnCarritoMate${id}">Agregar al Carrito</button>
+      </div>
+    </div>`
+    carousel_mates.append(div)
+    document.getElementById(`btnCarritoMate${id}`).addEventListener("click", ()=>{
+      carrito.push(i)
+      console.log(carrito);
+      localStorage.setItem("carrito", JSON.stringify(carrito))
+      agregarLinea(i)
+    })
+  }
+}
+
 for (const el of carrito){
   let tr = document.createElement("tbody")
   tr.innerHTML = `<tr>
@@ -38,59 +75,18 @@ function agregarLinea(obj){
     verCarrito.append(tr)
 }
 
-let precioTotal = 0
-function calcularPrecio (){
-  for (let a of carrito){
+function calcularPrecio (obj){
+  let tf = document.getElementById("precioTotal")
+  tf.innerHTML = `Total = $${precioTotal}`
+  for (let a of obj){
     precioTotal += a.precio
+    tf.innerHTML = `Total = $${precioTotal}`
   }
-  return precioTotal
-}
-calcularPrecio()
-let tf = document.getElementById("precioTotal")
-tf.innerHTML = `Total = ${precioTotal}`
-
-for(const i of agenda){
-  let {id, nombre, precio, img} = i
-    let div = document.createElement("div")
-    div.innerHTML = `<div class="card" style="width: 18rem;" id="agenda${id}">
-    <img src="${img}" class="card-img-top" alt="agenda${id}">
-    <div class="card-body">
-      <h5 class="card-title">${nombre}</h5>
-      <p class="card-text">Te gusta esta agenda? COMPRALA MACHO. Te sale $${precio}</p>
-      <button class="btn btn-primary" type="button" id="btnCarritoAgenda${id}">Agregar al Carrito</button>
-    </div>
-  </div>`
-  carousel_agenda.append(div)
-  document.getElementById(`btnCarritoAgenda${id}`).addEventListener("click", ()=>{
-    carrito.push(i)
-    console.log(carrito);
-    localStorage.setItem("carrito", JSON.stringify(carrito))
-    agregarLinea(i)
-  })
 }
 
-for(const i of mate){
-  let {id, nombre, precio, img} = i
-    let div = document.createElement("div")
-    div.innerHTML = `<div class="card" style="width: 18rem;" id="mates${id}">
-    <img src="${img}" class="card-img-top" alt="mate${id}">
-    <div class="card-body">
-      <h5 class="card-title">${nombre}</h5>
-      <p class="card-text">Te gusta este Mate? COMPRALA MACHO. Te sale $${precio}</p>
-      <button class="btn btn-primary" type="button" id="btnCarritoMate${id}">Agregar al Carrito</button>
-    </div>
-  </div>`
-  carousel_mates.append(div)
-  document.getElementById(`btnCarritoMate${id}`).addEventListener("click", ()=>{
-    carrito.push(i)
-    console.log(carrito);
-    localStorage.setItem("carrito", JSON.stringify(carrito))
-    agregarLinea(i)
-  })
-}
 
-const btnFinalizarCompra = document.getElementById("finalizarCompra")
-const btnCancelarCompra = document.getElementById("cancelarCompra")
+calcularPrecio(carrito)
+
 
 //function confirmarCompra(){
   // const { value: formValues } = await Swal.fire({

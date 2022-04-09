@@ -1,0 +1,19 @@
+.productos{
+    width: 90vw;
+    &Tabla{
+        margin: 20px 50px;
+        border: dashed;
+        background-color: beige;
+        tfoot{
+            text-align: center;
+            font-size: 1.7em;
+        }
+    }
+    &Botones{
+        display: flex;
+        justify-content: center;    
+        button{
+            margin: 0 20px 40px 20px;
+        }
+    }
+}
