@@ -81,7 +81,7 @@
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="10000">
-          <div class="d-flex" id="carousel-agenda">
+          <div class="d-flex agendasCards" id="carousel-agenda">
           </div>
         </div>
       </div>
@@ -116,8 +116,8 @@
     <a href="#seccionCarrito" type="button" class="btn btn-success botonCompra" id="verCarrito">Finalizar compra</a>
   </section>
 
-  <section id="seccionCarrito">
-    <table class="table table-striped" id="carrito">
+  <section class="productos" id="seccionCarrito">
+    <table class="table table-striped productosTabla" id="carrito">
       <thead>
         <tr>
           <th scope="col">Producto</th>
@@ -130,8 +130,10 @@
         <th scope="row" colspan="3" id="precioTotal"></th>
       </tfoot>
     </table>
-    <button type="button" class="btn btn-success" id="finalizarCompra">Finalizar Compra</button>
-    <button type="button" class="btn btn-danger" id="cancelarCompra">Cancelar Compra</button>
+    <div class="productosBotones">
+      <button type="button" class="btn btn-success" id="finalizarCompra">Finalizar Compra</button>
+      <button type="button" class="btn btn-danger" id="cancelarCompra">Cancelar Compra</button>
+    </div>
   </section>
 
   <!-- <section class="productosMates">productos 2
