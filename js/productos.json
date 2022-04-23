@@ -2,12 +2,14 @@
     [
         {"id": 1, "nombre": "Agenda 1", "precio": 300, "img":"../Imagenes/Agendas/agenda1.jpg"},
         {"id": 2, "nombre": "Agenda 2", "precio": 200, "img":"../Imagenes/Agendas/agenda2.jpg"},
-        {"id": 3, "nombre": "Agenda 3", "precio": 400, "img":"../Imagenes/Agendas/agenda3.jpg"}
+        {"id": 3, "nombre": "Agenda 3", "precio": 400, "img":"../Imagenes/Agendas/agenda3.jpg"},
+        {"id": 4, "nombre": "Agenda 4", "precio": 300, "img":"../Imagenes/Agendas/agenda4.jpg"}
     ],
 
     [
         {"id": 1, "nombre": "Mate 1", "precio": 300, "img":"../Imagenes/Mates/mate1.jpeg"},
         {"id": 2, "nombre": "Mate 2", "precio": 200, "img":"../Imagenes/Mates/mate2.jpg"},
-        {"id": 3, "nombre": "Mate 3", "precio": 400, "img":"../Imagenes/Mates/mate3.jpg"}
+        {"id": 3, "nombre": "Mate 3", "precio": 400, "img":"../Imagenes/Mates/mate3.jpg"},
+        {"id": 4, "nombre": "Mate 4", "precio": 300, "img":"../Imagenes/Mates/mate4.jpeg"}
     ]
 ]

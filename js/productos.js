@@ -8,7 +8,7 @@ const verCarrito = document.getElementById("carrito")
 const btnFinalizarCompra = document.getElementById("finalizarCompra")
 const btnCancelarCompra = document.getElementById("cancelarCompra")
 
-let precioTotal = 0
+
 
 let carrito = []
 let lsCarrito = localStorage.getItem("carrito") || []
@@ -19,7 +19,7 @@ function cargarElementos(x){
   for(const i of x[0]){
     let {id, nombre, precio, img} = i
       let div = document.createElement("div")
-      div.innerHTML = `<div class="card" style="width: 18rem;" id="agenda${id}">
+      div.innerHTML = `<div class="card" id="agenda${id}">
       <img src="${img}" class="card-img-top" alt="agenda${id}">
       <div class="card-body">
         <h5 class="card-title">${nombre}</h5>
@@ -33,13 +33,14 @@ function cargarElementos(x){
       console.log(carrito);
       localStorage.setItem("carrito", JSON.stringify(carrito))
       agregarLinea(i)
+      calcularPrecio(carrito)
     })
   }
   
   for(const i of x[1]){
     let {id, nombre, precio, img} = i
       let div = document.createElement("div")
-      div.innerHTML = `<div class="card" style="width: 18rem;" id="mates${id}">
+      div.innerHTML = `<div class="card" id="mates${id}">
       <img src="${img}" class="card-img-top" alt="mate${id}">
       <div class="card-body">
         <h5 class="card-title">${nombre}</h5>
@@ -53,61 +54,38 @@ function cargarElementos(x){
       console.log(carrito);
       localStorage.setItem("carrito", JSON.stringify(carrito))
       agregarLinea(i)
+      calcularPrecio(carrito)
     })
   }
 }
 
 for (const el of carrito){
-  let tr = document.createElement("tbody")
-  tr.innerHTML = `<tr>
+  let tr = document.createElement("tr")
+  tr.innerHTML = `
   <td>${el.nombre}</td>
   <td>${el.precio}</td>
-  </tr>`
+  `
   verCarrito.append(tr)
 }
 
 function agregarLinea(obj){
-  let tr = document.createElement("tbody")
-    tr.innerHTML = `<tr>
+  let tr = document.createElement("tr")
+    tr.innerHTML = `
     <td scope="row">${obj.nombre}</td>
     <td>${obj.precio}</td>
-    </tr>`
+    `
     verCarrito.append(tr)
 }
 
 function calcularPrecio (obj){
   let tf = document.getElementById("precioTotal")
-  tf.innerHTML = `Total = $${precioTotal}`
+  let precioTotal = 0
   for (let a of obj){
     precioTotal += a.precio
-    tf.innerHTML = `Total = $${precioTotal}`
   }
+  tf.innerHTML = `Total = $${precioTotal}`
 }
-
-
 calcularPrecio(carrito)
-
-
-//function confirmarCompra(){
-  // const { value: formValues } = await Swal.fire({
-  //   title: 'Ingrese sus datos',
-  //   text: `Nostros nos pondremos en contacto con usted para coordinar mejor <3`,
-  //   html:
-  //     '<input placeholder="Numero de telefono" type=number id="swal-input1" class="swal2-input">' +
-  //     '<input placeholder="Direccion" id="swal-input2" class="swal2-input">',
-  //   focusConfirm: false,
-  //   preConfirm: () => {
-  //     return [
-  //       document.getElementById('swal-input1').value,
-  //       document.getElementById('swal-input2').value
-  //     ]
-  //   }
-  // })
-  
-  // if (formValues) {
-  //   Swal.fire(JSON.stringify(formValues))
-  // }
-//}
 
 btnFinalizarCompra.addEventListener("click", ()=>{
   Swal.fire(
@@ -133,6 +111,9 @@ btnCancelarCompra.addEventListener("click", ()=>{
       'El carrito esta vacio',
       'success'
     )
+    carrito = []
+    verCarrito.innerHTML = ""
+    calcularPrecio(carrito)
     localStorage.removeItem("carrito")
   }
 })})
