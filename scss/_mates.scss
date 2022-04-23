@@ -1,13 +1,20 @@
 .productosMates{
-    display: flex;
-    position: relative;
-    height: 100vh;
-    z-index: 1;
+  display: flex;
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, pink, rgb(255, 100, 126));
     .card{
       margin: 0 50px;
       justify-content: space-evenly;
+      height: auto;
+      width: 12rem;
       img{
-        height: 250px;
+        height: 150px;
       }
     }
 
@@ -23,6 +30,7 @@
             height: inherit;
             width: 50vw;
             position: absolute;
+            right: 0;
           }
           &Mates{
             overflow-y: hidden;
@@ -31,6 +39,7 @@
             width: 80%;
             position: absolute;
             right: 0%;
+            left: 0;
           }
         }
     }
@@ -38,15 +47,17 @@
       z-index: 11;
       position: absolute;
       bottom: 40%;
-      left: 50px;
+      right: 50px;
       width: 30vw;
       background-color: rgba(127, 255, 212, 0.432);
-      
+    }
+    .flip{
+      transform: scaleX(-1);
     }
     .botonMates{
       z-index: 11;
       bottom: 35%;
-      left: 75px;
+      right: 75px;
       position: absolute;
     }
     .slide-out-left {
