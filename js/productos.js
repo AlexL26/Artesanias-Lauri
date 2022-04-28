@@ -4,29 +4,53 @@ fetch("./js/productos.json")
 
 const carousel_agenda = document.getElementById("carousel-agenda")
 const carousel_mates = document.getElementById("carousel-mates")
+const carousel_cuadernos = document.getElementById("carousel-cuadernos")
 const verCarrito = document.getElementById("carrito")
 const btnFinalizarCompra = document.getElementById("finalizarCompra")
 const btnCancelarCompra = document.getElementById("cancelarCompra")
-
-
 
 let carrito = []
 let lsCarrito = localStorage.getItem("carrito") || []
 
 lsCarrito.length > 0 ? carrito = JSON.parse(lsCarrito) : false
 
+async function formularioCompra(){
+  const { value: formValues } = await Swal.fire({
+    title: 'Formulario para la entrega',
+    showCancelButton: true,
+    cancelButtonColor: '#d33',
+    html:
+      'Gracias por habernos elegido. Te invitamos a que llenes este formulario para que podamos ponernos en contacto con vos y coordinemos la entrega y formas de pago.<input placeholder="Numero de celular (obligatorio)" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="swal-input1" class="swal2-input" required>' +
+      '<input placeholder="Nombre" type="text" id="swal-input2" class="swal2-input">' +
+      '<input placeholder="Direccion de envio" type="text" id="swal-input3" class="swal2-input">' +
+      '<input placeholder="email" type="email" id="swal-input4" class="swal2-input">',
+    focusConfirm: false,
+  })
+  
+  if (formValues) {
+    Swal.fire("Gracias por su compra. A la brevedad nos comunicaremos con usted para coordinar la entrega. Que tenga un bonito dia")
+  }
+}
+
+
 function cargarElementos(x){
   for(const i of x[0]){
     let {id, nombre, precio, img} = i
-      let div = document.createElement("div")
-      div.innerHTML = `<div class="card" id="agenda${id}">
-      <img src="${img}" class="card-img-top" alt="agenda${id}">
-      <div class="card-body">
-        <h5 class="card-title">${nombre}</h5>
-        <p class="card-text">Te gusta esta agenda? COMPRALA MACHO. Te sale $${precio}</p>
-        <button class="btn btn-primary" type="button" id="btnCarritoAgenda${id}">Agregar al Carrito</button>
-      </div>
-    </div>`
+    let div = document.createElement("div")
+    div.setAttribute("class", "swiper-slide card")
+    div.setAttribute("id", `agenda${id}`)
+    div.innerHTML = `<div class="card-content">
+                        <div class="image">
+                          <img src="${img}" alt="agenda${id}">
+                        </div>
+                        <div class="name-profession">
+                          <span class="name">${nombre}</span>
+                          <span class="profession">Te gusta esta agenda? COMPRALA MACHO. Te sale $${precio}</span>
+                        </div>
+                        <div class="button">
+                          <button class="aboutMe" id="btnCarritoAgenda${id}">Añadir al carrito</button>
+                        </div>
+                      </div>`
     carousel_agenda.append(div)
     document.getElementById(`btnCarritoAgenda${id}`).addEventListener("click", ()=>{
       carrito.push(i)
@@ -40,16 +64,49 @@ function cargarElementos(x){
   for(const i of x[1]){
     let {id, nombre, precio, img} = i
       let div = document.createElement("div")
-      div.innerHTML = `<div class="card" id="mates${id}">
-      <img src="${img}" class="card-img-top" alt="mate${id}">
-      <div class="card-body">
-        <h5 class="card-title">${nombre}</h5>
-        <p class="card-text">Te gusta este Mate? COMPRALA MACHO. Te sale $${precio}</p>
-        <button class="btn btn-primary" type="button" id="btnCarritoMate${id}">Agregar al Carrito</button>
-      </div>
-    </div>`
-    carousel_mates.append(div)
+      div.setAttribute("class", "swiper-slide card")
+      div.setAttribute("id", `mates${id}`)
+      div.innerHTML = `<div class="card-content">
+                          <div class="image">
+                            <img src="${img}" alt="mate${id}">
+                          </div>
+                          <div class="name-profession">
+                            <span class="name">${nombre}</span>
+                            <span class="profession">Te gusta esta agenda? COMPRALA MACHO. Te sale $${precio}</span>
+                          </div>
+                          <div class="button">
+                            <button class="aboutMe" id="btnCarritoMate${id}">Añadir al carrito</button>
+                          </div>
+                        </div>`
+      carousel_mates.append(div)
     document.getElementById(`btnCarritoMate${id}`).addEventListener("click", ()=>{
+      carrito.push(i)
+      console.log(carrito);
+      localStorage.setItem("carrito", JSON.stringify(carrito))
+      agregarLinea(i)
+      calcularPrecio(carrito)
+    })
+  }
+
+  for(const i of x[2]){
+    let {id, nombre, precio, img} = i
+      let div = document.createElement("div")
+      div.setAttribute("class", "swiper-slide card")
+      div.setAttribute("id", `cuaderno${id}`)
+      div.innerHTML = `<div class="card-content">
+                          <div class="image">
+                            <img src="${img}" alt="cuaderno${id}">
+                          </div>
+                          <div class="name-profession">
+                            <span class="name">${nombre}</span>
+                            <span class="profession">Te gusta esta agenda? COMPRALA MACHO. Te sale $${precio}</span>
+                          </div>
+                          <div class="button">
+                            <button class="aboutMe" id="btnCarritoCuaderno${id}">Añadir al carrito</button>
+                          </div>
+                        </div>`
+      carousel_cuadernos.append(div)
+    document.getElementById(`btnCarritoCuaderno${id}`).addEventListener("click", ()=>{
       carrito.push(i)
       console.log(carrito);
       localStorage.setItem("carrito", JSON.stringify(carrito))
@@ -88,11 +145,13 @@ function calcularPrecio (obj){
 calcularPrecio(carrito)
 
 btnFinalizarCompra.addEventListener("click", ()=>{
-  Swal.fire(
-    'Su compra ha sido confirmada',
-    'Gracias por confiar en nosotros! vuelva pronto',
-    'success'
-  )
+  formularioCompra()
+  .then(() => {
+      carrito = []
+      verCarrito.innerHTML = ""
+      calcularPrecio(carrito)
+      localStorage.removeItem("carrito")
+  })
 })
 
 btnCancelarCompra.addEventListener("click", ()=>{
