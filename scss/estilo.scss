@@ -1,20 +1,32 @@
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body{
-    background-color: rgb(255, 192, 203);
+  background-color: rgb(255, 192, 203);
 }
 
 .none{
     display: none;
 }
 
+// .card{
+//     margin: 0 30px;
+//     justify-content: space-evenly;
+//     height: auto;
+//     width: 12rem;
+//     img{
+//       height: 150px;
+//     }
+//   }
+
 @import "header";
 @import "main";
+@import "cards";
 @import "agendas";
 @import "mates";
-@import "combos";
+@import "cuadernos";
 @import "regalos";
 @import "carrito";
 @import "footer";

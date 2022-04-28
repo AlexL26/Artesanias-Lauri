@@ -1,23 +1,14 @@
 .productosMates{
   display: flex;
   position: relative;
-  width: 100vw;
+  width: 98vw;
+  margin: auto;
   overflow-x: hidden;
   height: 100vh;
   z-index: 1;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to bottom, pink, rgb(255, 100, 126));
-    .card{
-      margin: 0 50px;
-      justify-content: space-evenly;
-      height: auto;
-      width: 12rem;
-      img{
-        height: 150px;
-      }
-    }
-
+  background-image: linear-gradient(to bottom, pink, rgb(255, 100, 126), rgb(255, 100, 126));
     .mates{
         z-index: 2;
         position: absolute;
@@ -36,7 +27,7 @@
             overflow-y: hidden;
             z-index: 2;
             height: inherit;
-            width: 80%;
+            width: 75%;
             position: absolute;
             right: 0%;
             left: 0;

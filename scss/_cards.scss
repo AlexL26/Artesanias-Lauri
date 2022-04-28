@@ -1,0 +1,97 @@
+.container{
+    position: relative;
+    height: 450px;
+    width: 1075px;
+    display: flex;
+    align-items: center;
+}
+
+section{
+    .card{
+        position: relative;
+        background-color: #fff;
+        border-radius: 20px;
+        margin: 20px 0;
+        width: 280px;
+        .card-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            position: relative;
+            z-index: 100;
+        }
+        .image{
+            height: 200px;
+            width: 100%;
+            padding: 3px;
+            background-color: pink  ;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border: 3px solid white;
+            }
+        }
+        .name-profession{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+            color: grey;
+            .name{
+                font-size: 20px;
+            }
+            .profession{
+                font-size: 15px;
+            }
+        }
+        .button{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            button{
+                background: blueviolet;
+                outline: none;
+                border: none;
+                color: #fff;
+                padding: 8px 22px;
+                border-radius: 20px;
+                font-size: 14px;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            button:hover{
+                background: rgb(247, 99, 124);
+            }        
+        }
+    }
+    .card::before{
+        content: "";
+        position: absolute;
+        height: 40%;
+        width: 100%;
+        background-color: blueviolet;
+        border-radius: 20px 20px 0 0;
+    }
+}
+
+.swiper{
+    width: 950px;
+}
+
+.swiper-pagination-bullet{
+    height: 7px;
+    width: 26px;
+    border-radius: 25px;
+    background: blueviolet;
+}
+.swiper-button-next{
+    z-index: 1;
+    color: black;
+  }
+  .swiper-button-prev{
+    z-index: 1;
+    color: black;
+  }
