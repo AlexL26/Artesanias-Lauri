@@ -11,22 +11,11 @@ body{
     display: none;
 }
 
-// .card{
-//     margin: 0 30px;
-//     justify-content: space-evenly;
-//     height: auto;
-//     width: 12rem;
-//     img{
-//       height: 150px;
-//     }
-//   }
-
-@import "header";
-@import "main";
-@import "cards";
-@import "agendas";
-@import "mates";
-@import "cuadernos";
-@import "regalos";
-@import "carrito";
-@import "footer";
+@import "1main";
+@import "2header";
+@import "3cards";
+@import "4agendas";
+@import "5mates";
+@import "6cuadernos";
+@import "7carrito";
+@import "8footer";

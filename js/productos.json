@@ -4,55 +4,85 @@
             "id": 1,
             "nombre": "Agenda 1",
             "precio": 300,
-            "img": "../Imagenes/Agendas/agenda1.jpg"
+            "img": "/Imagenes/Agendas/agenda1.jpg",
+            "texto": "Agenda violeta brillante con decorado"
         },
         {
             "id": 2,
             "nombre": "Agenda 2",
             "precio": 200,
-            "img": "../Imagenes/Agendas/agenda2.jpg"
+            "img": "/Imagenes/Agendas/agenda2.jpg",
+            "texto": "Agenda rosa con tapa envolvente"
         },
         {
             "id": 3,
             "nombre": "Agenda 3",
             "precio": 400,
-            "img": "../Imagenes/Agendas/agenda3.jpg"
+            "img": "/Imagenes/Agendas/agenda3.jpg",
+            "texto": "Agenda negra brillante con cierre de broche"
         },
         {
             "id": 4,
             "nombre": "Agenda 4",
             "precio": 300,
-            "img": "../Imagenes/Agendas/agenda4.jpg"
+            "img": "/Imagenes/Agendas/agenda4.jpg",
+            "texto": "Agenda verde brillante con cierre de broche"
         },
         {
             "id": 5,
-            "nombre": "Agenda 1",
-            "precio": 300,
-            "img": "../Imagenes/Agendas/agenda1.jpg"
+            "nombre": "Agenda 5",
+            "precio": 600,
+            "img": "/Imagenes/Agendas/agenda5.jpg",
+            "texto": "Agenda con cierre envolvente y nombre personalizado"
         },
         {
-            "id": 5,
-            "nombre": "Agenda 1",
+            "id": 6,
+            "nombre": "Agenda 6",
             "precio": 300,
-            "img": "../Imagenes/Agendas/agenda1.jpg"
+            "img": "../Imagenes/Agendas/agenda6.jpg",
+            "texto": "Agenda tamaño bolsillo con decorado y nombre personalizado"
         },
         {
-            "id": 5,
-            "nombre": "Agenda 1",
-            "precio": 300,
-            "img": "../Imagenes/Agendas/agenda1.jpg"
+            "id": 7,
+            "nombre": "Agenda 7",
+            "precio": 450,
+            "img": "../Imagenes/Agendas/agenda7.jpg",
+            "texto": "Agenda blanca con relieve y nombre personalizado"
         },
         {
-            "id": 5,
-            "nombre": "Agenda 1",
+            "id": 8,
+            "nombre": "Agenda 8",
             "precio": 300,
-            "img": "../Imagenes/Agendas/agenda1.jpg"
+            "img": "../Imagenes/Agendas/agenda8.jpg",
+            "texto": "Agenda diaria en tono azul"
         },
         {
-            "id": 5,
-            "nombre": "Agenda 1",
+            "id": 9,
+            "nombre": "Agenda 9",
+            "precio": 200,
+            "img": "../Imagenes/Agendas/agenda9.jpg",
+            "texto": "Agenda ideal para anotar recetas"
+        },
+        {
+            "id": 10,
+            "nombre": "Agenda 10",
             "precio": 300,
-            "img": "../Imagenes/Agendas/agenda1.jpg"
+            "img": "../Imagenes/Agendas/agenda10.jpg",
+            "texto": "Agenda tamaño bolsillo con iniciales centradas en la portada"
+        },
+        {
+            "id": 11,
+            "nombre": "Agenda 11",
+            "precio": 400,
+            "img": "../Imagenes/Agendas/agenda11.jpg",
+            "texto": "Agenda tamaño bolsillo. Lechusita <3"
+        },
+        {
+            "id": 12,
+            "nombre": "Agenda 12",
+            "precio": 600,
+            "img": "../Imagenes/Agendas/agenda12.jpg",
+            "texto": "Agenda semanal tamaño oficio"
         }
     ],
     [
@@ -60,63 +90,163 @@
             "id": 1,
             "nombre": "Mate 1",
             "precio": 300,
-            "img": "../Imagenes/Mates/mate1.jpeg"
+            "img": "../Imagenes/Mates/mate1.jpeg",
+            "texto": "Mate pequeño de algarrobo con rosa de loto"
         },
         {
             "id": 2,
             "nombre": "Mate 2",
             "precio": 200,
-            "img": "../Imagenes/Mates/mate2.jpg"
+            "img": "../Imagenes/Mates/mate2.jpg",
+            "texto": "Mate pequeño de algarrobo con rosa de loto desde la base"
         },
         {
             "id": 3,
             "nombre": "Mate 3",
             "precio": 400,
-            "img": "../Imagenes/Mates/mate3.jpg"
+            "img": "../Imagenes/Mates/mate3.jpg",
+            "texto": "Mate mediano rosa de algarrobo"
         },
         {
             "id": 4,
             "nombre": "Mate 4",
-            "precio": 300,
-            "img": "../Imagenes/Mates/mate4.jpeg"
+            "precio": 700,
+            "img": "../Imagenes/Mates/mate4.jpg",
+            "texto": "Mate hexagonal mediano con diseño personalizado"
         },
         {
             "id": 5,
-            "nombre": "Mate 4",
+            "nombre": "Mate 5",
+            "precio": 200,
+            "img": "../Imagenes/Mates/mate5.jpg",
+            "texto": "Mate pequeño de algarrobo ovalado con rosas"
+        },
+        {
+            "id": 6,
+            "nombre": "Mate 6",
+            "precio": 550,
+            "img": "../Imagenes/Mates/mate6.jpg",
+            "texto": "Mate pequeño tu libro favorito (personalizado)"
+        },
+        {
+            "id": 7,
+            "nombre": "Mate 7",
             "precio": 300,
-            "img": "../Imagenes/Mates/mate4.jpeg"
+            "img": "../Imagenes/Mates/mate7.jpg",
+            "texto": "Mate mediano de algarrobo con flor jacaranda blanca"
+        },
+        {
+            "id": 8,
+            "nombre": "Mate 8",
+            "precio": 500,
+            "img": "../Imagenes/Mates/mate8.png",
+            "texto": "Mates para regalar, el segundo a mitad de precio"
+        },
+        {
+            "id": 9,
+            "nombre": "Mate 9",
+            "precio": 450,
+            "img": "../Imagenes/Mates/mate9.jpg",
+            "texto": "Mate hexagonal temática America"
         }
     ],
     [
         {
             "id": 1,
             "nombre": "Cuaderno 1",
-            "precio": 300,
-            "img": "../Imagenes/Cuadernos/Cuaderno1.jpg"
+            "precio": 600,
+            "img": "../Imagenes/Cuadernos/Cuaderno1.jpg",
+            "texto": "Cuaderno con tematica osita rosa"
         },
         {
             "id": 2,
             "nombre": "Cuaderno 2",
-            "precio": 200,
-            "img": "../Imagenes/Cuadernos/Cuaderno2.jpg"
+            "precio": 700,
+            "img": "../Imagenes/Cuadernos/Cuaderno2.jpg",
+            "texto": "Cuaderno tematica FRIENDS"
         },
         {
             "id": 3,
             "nombre": "Cuaderno 3",
             "precio": 400,
-            "img": "../Imagenes/Cuadernos/Cuaderno3.jpg"
+            "img": "../Imagenes/Cuadernos/Cuaderno3.jpg",
+            "texto": "Cuaderno con cierre envolvente y broche mariposa"
         },
         {
             "id": 4,
             "nombre": "Cuaderno 4",
-            "precio": 300,
-            "img": "../Imagenes/Cuadernos/Cuaderno4.jpg"
+            "precio": 500,
+            "img": "../Imagenes/Cuadernos/Cuaderno4.jpg",
+            "texto": "Cuaderno con cierre envolvente y nombre personalizado"
         },
         {
             "id": 5,
-            "nombre": "Cuaderno 4",
-            "precio": 300,
-            "img": "../Imagenes/Cuadernos/Cuaderno4.jpg"
+            "nombre": "Cuaderno 5",
+            "precio": 350,
+            "img": "../Imagenes/Cuadernos/cuaderno5.jpg",
+            "texto": "Cuaderno para los mas chiquitos"
+        },
+        {
+            "id": 6,
+            "nombre": "Cuaderno 6",
+            "precio": 650,
+            "img": "../Imagenes/Cuadernos/cuaderno6.jpg",
+            "texto": "Cuaderno para empezar la escuela con regla de regalo"
+        },
+        {
+            "id": 7,
+            "nombre": "Cuaderno 7",
+            "precio": 750,
+            "img": "../Imagenes/Cuadernos/cuaderno7.jpg",
+            "texto": "Cuaderno con decorado elegante"
+        },
+        {
+            "id": 8,
+            "nombre": "Cuaderno 8",
+            "precio": 700,
+            "img": "../Imagenes/Cuadernos/cuaderno9.jpg",
+            "texto": "Cuaderno con tapa cierre envolvente"
+        },
+        {
+            "id": 9,
+            "nombre": "Cuaderno 9",
+            "precio": 800,
+            "img": "../Imagenes/Cuadernos/cuaderno10.jpg",
+            "texto": "Cuaderno mini con marcadores y agenda"
+        },
+        {
+            "id": 10,
+            "nombre": "Cuaderno 10",
+            "precio": 350,
+            "img": "../Imagenes/Cuadernos/cuaderno12.jpg",
+            "texto": "Cuaderno para colorear"
+        },
+        {
+            "id": 11,
+            "nombre": "Cuaderno 11",
+            "precio": 500,
+            "img": "../Imagenes/Cuadernos/cuaderno13.jpg",
+            "texto": "Cuaderno con nombre personalizado"
+        },{
+            "id": 12,
+            "nombre": "Cuaderno 12",
+            "precio": 600,
+            "img": "../Imagenes/Cuadernos/cuaderno14.jpg",
+            "texto": "Cuaderno Pandita"
+        },
+        {
+            "id": 13,
+            "nombre": "Cuaderno 13",
+            "precio": 400,
+            "img": "../Imagenes/Cuadernos/cuaderno15.jpg",
+            "texto": "Cuaderno de los Cactus"
+        },
+        {
+            "id": 14,
+            "nombre": "Cuaderno 14",
+            "precio": 800,
+            "img": "../Imagenes/Cuadernos/cuaderno16.jpg",
+            "texto": "Cuaderno con bordes refozados y tapa dura"
         }
     ]
 ]

@@ -35,21 +35,29 @@
         }
     }
     .introMates{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-style: italic;
       z-index: 11;
       position: absolute;
-      bottom: 40%;
       right: 50px;
       width: 30vw;
-      background-color: rgba(127, 255, 212, 0.432);
-    }
+      bottom: 25%;
+      background-color: rgba(255, 255, 255, 0.836);
+      border-radius: 20px;
+      padding: 15px;    
+      }
     .flip{
       transform: scaleX(-1);
     }
     .botonMates{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 900;
       z-index: 11;
-      bottom: 35%;
       right: 75px;
       position: absolute;
+      bottom: 20%;
+      border: outset;
     }
     .slide-out-left {
         -webkit-animation: slide-out-left 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
