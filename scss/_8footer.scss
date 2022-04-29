@@ -6,6 +6,9 @@
     justify-content: center;
     position: relative;
     p{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        color: black;
         position: absolute;
         top: 5%;
     }
@@ -18,6 +21,8 @@
         align-items: center;   
         position: relative;
         span{
+            font-family: 'Roboto', sans-serif;
+            color: black;
             position: absolute;
             top: 3%;
             text-align: center;

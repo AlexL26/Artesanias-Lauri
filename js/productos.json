@@ -4,21 +4,21 @@
             "id": 1,
             "nombre": "Agenda 1",
             "precio": 300,
-            "img": "/Imagenes/Agendas/agenda1.jpg",
+            "img": "Imagenes/Agendas/agenda1.jpg",
             "texto": "Agenda violeta brillante con decorado"
         },
         {
             "id": 2,
             "nombre": "Agenda 2",
             "precio": 200,
-            "img": "/Imagenes/Agendas/agenda2.jpg",
+            "img": "Imagenes/Agendas/agenda2.jpg",
             "texto": "Agenda rosa con tapa envolvente"
         },
         {
             "id": 3,
             "nombre": "Agenda 3",
             "precio": 400,
-            "img": "/Imagenes/Agendas/agenda3.jpg",
+            "img": "Imagenes/Agendas/agenda3.jpg",
             "texto": "Agenda negra brillante con cierre de broche"
         },
         {
@@ -219,7 +219,7 @@
             "nombre": "Cuaderno 10",
             "precio": 350,
             "img": "../Imagenes/Cuadernos/cuaderno12.jpg",
-            "texto": "Cuaderno para colorear"
+            "texto": "Cuaderno para que coloreen los mas chiquitos"
         },
         {
             "id": 11,
@@ -232,14 +232,14 @@
             "nombre": "Cuaderno 12",
             "precio": 600,
             "img": "../Imagenes/Cuadernos/cuaderno14.jpg",
-            "texto": "Cuaderno Pandita"
+            "texto": "Cuaderno con un Pandita azul"
         },
         {
             "id": 13,
             "nombre": "Cuaderno 13",
             "precio": 400,
             "img": "../Imagenes/Cuadernos/cuaderno15.jpg",
-            "texto": "Cuaderno de los Cactus"
+            "texto": "Cuaderno con tematica de cactus"
         },
         {
             "id": 14,

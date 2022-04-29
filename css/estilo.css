@@ -409,6 +409,9 @@ section .card::before {
   justify-content: center;
   position: relative; }
   .footer p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: black;
     position: absolute;
     top: 5%; }
   .footer .redes {
@@ -420,6 +423,8 @@ section .card::before {
     align-items: center;
     position: relative; }
     .footer .redes span {
+      font-family: 'Roboto', sans-serif;
+      color: black;
       position: absolute;
       top: 3%;
       text-align: center;
