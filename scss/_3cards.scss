@@ -1,11 +1,3 @@
-.container{
-    position: relative;
-    height: 450px;
-    width: 1075px;
-    display: flex;
-    align-items: center;
-}
-
 section{
     .card{
         position: relative;
@@ -13,6 +5,7 @@ section{
         border-radius: 20px;
         margin: 20px 0;
         width: 280px;
+        height: 400px;
         .card-content{
             display: flex;
             flex-direction: column;
@@ -78,7 +71,22 @@ section{
 }
 
 .swiper{
-    width: 950px;
+    width: 75vw;
+    .swiper-pagination-bullet{
+        border: solid;
+        height: 10px;
+        width: 36px;
+        border-radius: 25px;
+        background: blueviolet;
+    }
+    .swiper-button-next{
+        z-index: 1;
+        color: black;
+      }
+      .swiper-button-prev{
+        z-index: 1;
+        color: black;
+      }
 }
 
 .swiper-pagination-bullet{

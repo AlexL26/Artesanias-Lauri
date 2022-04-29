@@ -9,6 +9,19 @@ body {
 .none {
   display: none; }
 
+main img {
+  height: 300px;
+  width: 300px; }
+
+.botonCompra {
+  position: absolute;
+  bottom: 5%;
+  left: 40%;
+  height: fit-content;
+  width: fit-content;
+  font-size: 1.5rem;
+  font-weight: 700; }
+
 header {
   background-color: #fff4f1;
   background-image: url(../Imagenes/Fondo.jpg);
@@ -33,32 +46,13 @@ header {
           background-color: #fa8d9f;
           border-radius: 10px; }
 
-main img {
-  height: 300px;
-  width: 300px; }
-
-.botonCompra {
-  position: absolute;
-  bottom: 5%;
-  left: 40%;
-  height: fit-content;
-  width: fit-content;
-  font-size: 1.5rem;
-  font-weight: 700; }
-
-.container {
-  position: relative;
-  height: 450px;
-  width: 1075px;
-  display: flex;
-  align-items: center; }
-
 section .card {
   position: relative;
   background-color: #fff;
   border-radius: 20px;
   margin: 20px 0;
-  width: 280px; }
+  width: 280px;
+  height: 400px; }
   section .card .card-content {
     display: flex;
     flex-direction: column;
@@ -113,7 +107,19 @@ section .card::before {
   border-radius: 20px 20px 0 0; }
 
 .swiper {
-  width: 950px; }
+  width: 75vw; }
+  .swiper .swiper-pagination-bullet {
+    border: solid;
+    height: 10px;
+    width: 36px;
+    border-radius: 25px;
+    background: blueviolet; }
+  .swiper .swiper-button-next {
+    z-index: 1;
+    color: black; }
+  .swiper .swiper-button-prev {
+    z-index: 1;
+    color: black; }
 
 .swiper-pagination-bullet {
   height: 7px;
@@ -161,17 +167,25 @@ section .card::before {
         position: absolute;
         right: 0%; }
   .productosAgendas .introAgendas {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: italic;
     z-index: 11;
     position: absolute;
-    bottom: 40%;
     left: 50px;
     width: 30vw;
-    background-color: rgba(127, 255, 212, 0.432); }
+    bottom: 25%;
+    background-color: rgba(255, 255, 255, 0.836);
+    border-radius: 20px;
+    padding: 15px; }
   .productosAgendas .botonAgendas {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
     z-index: 11;
-    bottom: 35%;
     left: 75px;
-    position: absolute; }
+    position: absolute;
+    bottom: 20%;
+    border: outset; }
   .productosAgendas .slide-out-right {
     -webkit-animation: slide-out-right 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
     animation: slide-out-right 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
@@ -228,19 +242,27 @@ section .card::before {
       right: 0%;
       left: 0; }
   .productosMates .introMates {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: italic;
     z-index: 11;
     position: absolute;
-    bottom: 40%;
     right: 50px;
     width: 30vw;
-    background-color: rgba(127, 255, 212, 0.432); }
+    bottom: 25%;
+    background-color: rgba(255, 255, 255, 0.836);
+    border-radius: 20px;
+    padding: 15px; }
   .productosMates .flip {
     transform: scaleX(-1); }
   .productosMates .botonMates {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
     z-index: 11;
-    bottom: 35%;
     right: 75px;
-    position: absolute; }
+    position: absolute;
+    bottom: 20%;
+    border: outset; }
   .productosMates .slide-out-left {
     -webkit-animation: slide-out-left 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
     animation: slide-out-left 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
@@ -279,7 +301,6 @@ section .card::before {
   .productosCuadernos .cuadernos {
     z-index: 2;
     position: absolute;
-    background-color: #70d8cf;
     height: inherit;
     width: 100vw; }
     .productosCuadernos .cuadernos .imagen {
@@ -295,21 +316,27 @@ section .card::before {
         height: inherit;
         width: 75%;
         position: absolute;
-        right: 0%;
-        transform: scaleX(-1);
-        transform: scaleY(-1); }
+        right: 0%; }
   .productosCuadernos .introCuadernos {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: italic;
     z-index: 11;
     position: absolute;
-    bottom: 40%;
     left: 50px;
     width: 30vw;
-    background-color: rgba(127, 255, 212, 0.432); }
+    bottom: 25%;
+    background-color: rgba(255, 255, 255, 0.836);
+    border-radius: 20px;
+    padding: 15px; }
   .productosCuadernos .botonCuadernos {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
     z-index: 11;
-    bottom: 35%;
     left: 75px;
-    position: absolute; }
+    position: absolute;
+    bottom: 20%;
+    border: outset; }
   .productosCuadernos .slide-out-right {
     -webkit-animation: slide-out-right 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
     animation: slide-out-right 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
@@ -334,65 +361,44 @@ section .card::before {
     transform: translateX(1000px);
     opacity: 0; } }
 
-.productosRegalos {
-  display: flex;
-  position: relative;
-  height: 100vh;
-  z-index: 1; }
-  .productosRegalos .regalos {
-    z-index: 10;
-    position: absolute;
-    background-image: url(../Imagenes/regalos.jpg);
-    height: inherit;
-    width: 100vw;
-    background-size: cover;
-    background-position-y: center;
-    object-fit: cover;
-    background-repeat: no-repeat; }
-  .productosRegalos .botonRegalos {
-    z-index: 11;
-    position: absolute; }
-  .productosRegalos .slide-out-left {
-    -webkit-animation: slide-out-left 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-    animation: slide-out-left 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
-
-@-webkit-keyframes slide-out-left {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1; }
-  100% {
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
-    opacity: 0; } }
-
-@keyframes slide-out-left {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1; }
-  100% {
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
-    opacity: 0; } }
-
 .carrito {
   width: 90vw;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
   align-items: center;
+  position: relative;
   min-height: 80vh;
   width: 98vw;
   margin: auto;
   background-image: linear-gradient(to bottom, pink, white); }
+  .carrito h2 {
+    padding: 0 20px;
+    grid-row: 4 / 4;
+    grid-column: 1;
+    font-family: 'Courgette', cursive;
+    font-size: 64px;
+    font-weight: 100;
+    text-decoration-line: underline;
+    color: black;
+    top: 15%;
+    left: 40%; }
   .carritoTabla {
+    font-family: 'Indie Flower', cursive;
+    font-size: 28px;
+    color: black;
     margin: 20px 50px;
-    border: dashed;
-    background-color: beige;
+    border: double blueviolet;
+    background-color: #d5b2f5;
     width: 50vw; }
     .carritoTabla tfoot {
       text-align: center;
       font-size: 1.7em; }
   .carritoBotones button {
+    font-family: 'Indie Flower', cursive;
+    font-weight: 600;
+    font-size: 20px;
     margin: 0 20px 40px 20px; }
 
 .footer {

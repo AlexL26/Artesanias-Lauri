@@ -35,7 +35,7 @@ async function formularioCompra(){
 
 function cargarElementos(x){
   for(const i of x[0]){
-    let {id, nombre, precio, img} = i
+    let {id, nombre, precio, img, texto} = i
     let div = document.createElement("div")
     div.setAttribute("class", "swiper-slide card")
     div.setAttribute("id", `agenda${id}`)
@@ -45,7 +45,7 @@ function cargarElementos(x){
                         </div>
                         <div class="name-profession">
                           <span class="name">${nombre}</span>
-                          <span class="profession">Te gusta esta agenda? COMPRALA MACHO. Te sale $${precio}</span>
+                          <span class="profession">${texto}. Te sale $${precio}</span>
                         </div>
                         <div class="button">
                           <button class="aboutMe" id="btnCarritoAgenda${id}">Añadir al carrito</button>
@@ -62,7 +62,7 @@ function cargarElementos(x){
   }
   
   for(const i of x[1]){
-    let {id, nombre, precio, img} = i
+    let {id, nombre, precio, img, texto} = i
       let div = document.createElement("div")
       div.setAttribute("class", "swiper-slide card")
       div.setAttribute("id", `mates${id}`)
@@ -72,7 +72,7 @@ function cargarElementos(x){
                           </div>
                           <div class="name-profession">
                             <span class="name">${nombre}</span>
-                            <span class="profession">Te gusta esta agenda? COMPRALA MACHO. Te sale $${precio}</span>
+                            <span class="profession">${texto}. Te sale $${precio}</span>
                           </div>
                           <div class="button">
                             <button class="aboutMe" id="btnCarritoMate${id}">Añadir al carrito</button>
@@ -89,7 +89,7 @@ function cargarElementos(x){
   }
 
   for(const i of x[2]){
-    let {id, nombre, precio, img} = i
+    let {id, nombre, precio, img, texto} = i
       let div = document.createElement("div")
       div.setAttribute("class", "swiper-slide card")
       div.setAttribute("id", `cuaderno${id}`)
@@ -99,7 +99,7 @@ function cargarElementos(x){
                           </div>
                           <div class="name-profession">
                             <span class="name">${nombre}</span>
-                            <span class="profession">Te gusta esta agenda? COMPRALA MACHO. Te sale $${precio}</span>
+                            <span class="profession">${texto}. Te sale $${precio}</span>
                           </div>
                           <div class="button">
                             <button class="aboutMe" id="btnCarritoCuaderno${id}">Añadir al carrito</button>
