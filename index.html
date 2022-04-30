@@ -7,8 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Artesanias Lauri</title>
   <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- <script src="js/slides.js" defer></script>
-  <script defer src="js/productos.js"></script> -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -58,7 +59,6 @@
     </nav>
   </header>
 
-
   <section class="productosAgendas" id="idAgendas">
 
     <div class="swiper mySwiper ">
@@ -69,17 +69,16 @@
       <div class="swiper-pagination"></div>
     </div>
 
-    <div class="agendas">
-      <img src="Imagenes/WhatsApp Image 2022-03-19 at 12.47.54.png" class="imagenTexto" alt="">
-      <img src="Imagenes/Agendas/agenda1.jpg" class="imagenAgenda" alt="">
+    <div class="agendas" id="pantallaAgendas">
+      <img src="Imagenes/WhatsApp Image 2022-03-19 at 12.47.54.png" class="imagenTexto" alt="imagenFondoTexto">
+      <img src="Imagenes/Agendas/agenda1.jpg" class="imagenAgenda" alt="ImagenPresentacionAgenda">
       <p class="introAgendas">¿Querés agendas diarias, semanales, mensuales? O tal vez estés buscando agendas
         calendario, o agendas para guardar recetas. Bueno, lo que estés buscando probablemente lo tengamos, y en estilos
         muy lindos y elegantes. Y si no encontraste lo que buscas mandanos un mensajito y nosotros te lo hacemos.</p>
     </div>
-    <button type="button" class="btn btn-primary botonAgendas">Ver agendas</button>
+    <button type="button" class="btn btn-primary botonAgendas" id="botonAgendas">Ver agendas</button>
     <a href="#seccionCarrito" type="button" class="btn btn-dark botonCompra" id="verCarrito">Finalizar compra</a>
   </section>
-
 
   <section class="productosMates" id="idMates">
 
@@ -91,16 +90,15 @@
       <div class="swiper-pagination"></div>
     </div>
 
-    <div class="mates">
-      <img src="Imagenes/WhatsApp Image 2022-03-19 at 12.47.54.png" class="imagenTexto flip" alt="">
-      <img src="Imagenes/mates.jpg" class="imagenMates" alt="">
+    <div class="mates" id="pantallaMates">
+      <img src="Imagenes/WhatsApp Image 2022-03-19 at 12.47.54.png" class="imagenTexto flip" alt="imagenFondoTexto">
+      <img src="Imagenes/mates.jpg" class="imagenMates" alt="ImagenPresentacionMates">
       <p class="introMates">Entrá y conocé nuestros mates. Son todos hechos con madera, pintados a mano en diseños tanto
         clásicos como únicos. Dale al botón de entrar y mira los que tenemos en stock.</p>
     </div>
-    <button type="button" class="btn btn-primary botonMates">Ver Mates</button>
+    <button type="button" class="btn btn-primary botonMates" id="botonMates">Ver Mates</button>
     <a href="#seccionCarrito" type="button" class="btn btn-dark botonCompra" id="verCarrito">Finalizar compra</a>
   </section>
-
 
   <section class="productosCuadernos" id="idCuadernos">
     <div class="swiper mySwiper">
@@ -110,17 +108,16 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
     </div>
-    <div class="cuadernos">
-      <img src="Imagenes/WhatsApp Image 2022-03-19 at 12.47.54.png" class="imagenTexto flip" alt="">
-      <img src="Imagenes/cuadernos.jpg" class="imagenCuadernos" alt="">
+    <div class="cuadernos" id="pantallaCuadernos">
+      <img src="Imagenes/WhatsApp Image 2022-03-19 at 12.47.54.png" class="imagenTexto flip" alt="imagenFondoTexto">
+      <img src="Imagenes/cuadernos.jpg" class="imagenCuadernos" alt="ImagenPresentacionCuadernos">
       <p class="introCuadernos">Acá vas a encontrar todos los cuadernos que tenemos a disposición. Todos los hicimos a
         mano, y tenemos de distintos tamaños. Si no encontrás el que querés o tenes algún diseño en particular que
         quisieras que hagamos, podes hablarnos y nosotros te lo hacemos. Pasá y mirá lo que tenemos para vos</p>
     </div>
-    <button type="button" class="btn btn-primary botonCuadernos">Ver Cuadernos</button>
+    <button type="button" class="btn btn-primary botonCuadernos" id="botonCuadernos">Ver Cuadernos</button>
     <a href="#seccionCarrito" type="button" class="btn btn-dark botonCompra" id="verCarrito">Finalizar compra</a>
   </section>
-
 
   <section class="carrito" id="seccionCarrito">
     <div class="titulo">
@@ -147,11 +144,10 @@
     </div>
   </section>
 
-
   <footer class="footer">
-    <p>Si tenes alguna duda, consulta o sugerencia te invitamos a buscarnos en algunas de nuestras redes</p>
+    <p>Si tenés alguna duda, consulta o sugerencia te invitamos a buscarnos en algunas de nuestras redes</p>
     <div class="redes">
-      <span>Para ver nuestros productos en stock y tambien aquellos que por ahora no tenemos clikea aca y visitanos en
+      <span>Para ver nuestros productos en stock y tambien aquellos que por ahora no tenemos clikea acá y visitanos en
         alguna de estas redes</span>
       <div class="imagenes">
         <img src="Imagenes/facebook.png" alt="facebook">
@@ -160,7 +156,7 @@
       </div>
     </div>
     <div class="redes">
-      <span>Para ponerte en contacto con nosotros clickea aca que te va a llevar a una sala de chat privado con
+      <span>Para ponerte en contacto con nosotros clickea acá que te va a llevar a una sala de chat privado con
         nostros</span>
       <div class="imagenes">
         <img src="Imagenes/messenger.png" alt="messenger">
@@ -169,10 +165,6 @@
     </div>
   </footer>
 
-
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 

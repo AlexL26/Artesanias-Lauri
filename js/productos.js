@@ -39,16 +39,16 @@ function cargarElementos(x){
     let div = document.createElement("div")
     div.setAttribute("class", "swiper-slide card")
     div.setAttribute("id", `agenda${id}`)
-    div.innerHTML = `<div class="card-content">
-                        <div class="image">
+    div.innerHTML = `<div class="card-contenido">
+                        <div class="imagenProducto">
                           <img src="${img}" alt="agenda${id}">
                         </div>
-                        <div class="name-profession">
-                          <span class="name">${nombre}</span>
-                          <span class="profession">${texto}. Te sale $${precio}</span>
+                        <div class="nombre-texto">
+                          <span class="nombreProducto">${nombre}</span>
+                          <span class="textoProducto">${texto}. Te sale $${precio}</span>
                         </div>
-                        <div class="button">
-                          <button class="aboutMe" id="btnCarritoAgenda${id}">Añadir al carrito</button>
+                        <div class="botonAñadir">
+                          <button id="btnCarritoAgenda${id}">Añadir al carrito</button>
                         </div>
                       </div>`
     carousel_agenda.append(div)
@@ -66,16 +66,16 @@ function cargarElementos(x){
       let div = document.createElement("div")
       div.setAttribute("class", "swiper-slide card")
       div.setAttribute("id", `mates${id}`)
-      div.innerHTML = `<div class="card-content">
-                          <div class="image">
+      div.innerHTML = `<div class="card-contenido">
+                          <div class="imagenProducto">
                             <img src="${img}" alt="mate${id}">
                           </div>
-                          <div class="name-profession">
-                            <span class="name">${nombre}</span>
-                            <span class="profession">${texto}. Te sale $${precio}</span>
+                          <div class="nombre-texto">
+                            <span class="nombreProducto">${nombre}</span>
+                            <span class="textoProducto">${texto}. Te sale $${precio}</span>
                           </div>
-                          <div class="button">
-                            <button class="aboutMe" id="btnCarritoMate${id}">Añadir al carrito</button>
+                          <div class="botonAñadir">
+                            <button id="btnCarritoMate${id}">Añadir al carrito</button>
                           </div>
                         </div>`
       carousel_mates.append(div)
@@ -93,16 +93,16 @@ function cargarElementos(x){
       let div = document.createElement("div")
       div.setAttribute("class", "swiper-slide card")
       div.setAttribute("id", `cuaderno${id}`)
-      div.innerHTML = `<div class="card-content">
-                          <div class="image">
+      div.innerHTML = `<div class="card-contenido">
+                          <div class="imagenProducto">
                             <img src="${img}" alt="cuaderno${id}">
                           </div>
-                          <div class="name-profession">
-                            <span class="name">${nombre}</span>
-                            <span class="profession">${texto}. Te sale $${precio}</span>
+                          <div class="nombre-texto">
+                            <span class="nombreProducto">${nombre}</span>
+                            <span class="textoProducto">${texto}. Te sale $${precio}</span>
                           </div>
-                          <div class="button">
-                            <button class="aboutMe" id="btnCarritoCuaderno${id}">Añadir al carrito</button>
+                          <div class="botonAñadir">
+                            <button id="btnCarritoCuaderno${id}">Añadir al carrito</button>
                           </div>
                         </div>`
       carousel_cuadernos.append(div)
