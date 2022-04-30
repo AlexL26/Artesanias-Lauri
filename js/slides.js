@@ -1,12 +1,9 @@
-let agendas = document.getElementsByClassName("agendas")[0]
-let mates = document.getElementsByClassName("mates")[0]
-let cuadernos = document.getElementsByClassName("cuadernos")[0]
-let regalos = document.getElementsByClassName("regalos")[0]
-let botonAgendas = document.getElementsByClassName("botonAgendas")[0]
-let botonMates = document.getElementsByClassName("botonMates")[0]
-let botonCuadernos = document.getElementsByClassName("botonCuadernos")[0]
-let botonRegalos = document.getElementsByClassName("botonRegalos")[0]
-let footer = document.getElementsByClassName('footer')[0]
+let agendas = document.getElementById("pantallaAgendas")
+let mates = document.getElementById("pantallaMates")
+let cuadernos = document.getElementById("pantallaCuadernos")
+let botonAgendas = document.getElementById("botonAgendas")
+let botonMates = document.getElementById("botonMates")
+let botonCuadernos = document.getElementById("botonCuadernos")
 
 botonAgendas.addEventListener("click", (e)=>{
     agendas.classList.add("slide-out-right")
@@ -34,8 +31,3 @@ botonCuadernos.addEventListener("click", (e)=>{
         e.target.classList.add("none")
     }, 1000)
 })
-
-// botonRegalos.addEventListener("click", (e)=>{
-//     regalos.classList.add("slide-out-left")
-//     e.target.classList.add("slide-out-left")
-// })

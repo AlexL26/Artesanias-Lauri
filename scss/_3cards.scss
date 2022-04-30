@@ -6,7 +6,7 @@ section{
         margin: 20px 0;
         width: 280px;
         height: 400px;
-        .card-content{
+        .card-contenido{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -14,7 +14,7 @@ section{
             position: relative;
             z-index: 100;
         }
-        .image{
+        .imagenProducto{
             height: 200px;
             width: 100%;
             padding: 3px;
@@ -26,20 +26,20 @@ section{
                 border: 3px solid white;
             }
         }
-        .name-profession{
+        .nombre-texto{
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-top: 10px;
             color: grey;
-            .name{
+            .nombreProducto{
                 font-size: 20px;
             }
-            .profession{
+            .textoProducto{
                 font-size: 15px;
             }
         }
-        .button{
+        .botonAñadir{
             width: 100%;
             display: flex;
             justify-content: center;
@@ -57,7 +57,7 @@ section{
             }
             button:hover{
                 background: rgb(247, 99, 124);
-            }        
+            }
         }
     }
     .card::before{
@@ -88,18 +88,3 @@ section{
         color: black;
       }
 }
-
-.swiper-pagination-bullet{
-    height: 7px;
-    width: 26px;
-    border-radius: 25px;
-    background: blueviolet;
-}
-.swiper-button-next{
-    z-index: 1;
-    color: black;
-  }
-  .swiper-button-prev{
-    z-index: 1;
-    color: black;
-  }

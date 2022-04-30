@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -53,39 +54,39 @@ section .card {
   margin: 20px 0;
   width: 280px;
   height: 400px; }
-  section .card .card-content {
+  section .card .card-contenido {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px;
     position: relative;
     z-index: 100; }
-  section .card .image {
+  section .card .imagenProducto {
     height: 200px;
     width: 100%;
     padding: 3px;
     background-color: pink; }
-    section .card .image img {
+    section .card .imagenProducto img {
       height: 100%;
       width: 100%;
       object-fit: cover;
       border: 3px solid white; }
-  section .card .name-profession {
+  section .card .nombre-texto {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
     color: grey; }
-    section .card .name-profession .name {
+    section .card .nombre-texto .nombreProducto {
       font-size: 20px; }
-    section .card .name-profession .profession {
+    section .card .nombre-texto .textoProducto {
       font-size: 15px; }
-  section .card .button {
+  section .card .botonAñadir {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 20px; }
-    section .card .button button {
+    section .card .botonAñadir button {
       background: blueviolet;
       outline: none;
       border: none;
@@ -95,7 +96,7 @@ section .card {
       font-size: 14px;
       transition: all 0.3s ease;
       cursor: pointer; }
-    section .card .button button:hover {
+    section .card .botonAñadir button:hover {
       background: #f7637c; }
 
 section .card::before {
@@ -120,20 +121,6 @@ section .card::before {
   .swiper .swiper-button-prev {
     z-index: 1;
     color: black; }
-
-.swiper-pagination-bullet {
-  height: 7px;
-  width: 26px;
-  border-radius: 25px;
-  background: blueviolet; }
-
-.swiper-button-next {
-  z-index: 1;
-  color: black; }
-
-.swiper-button-prev {
-  z-index: 1;
-  color: black; }
 
 .productosAgendas {
   display: flex;
